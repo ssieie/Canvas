@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Graffiti board</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    .pen-wap{position: absolute;left: 50%;transform: translate(-50%);z-index: 9;}
+    .color span,.thickness span{display: inline-block;margin: 0 10px;cursor: pointer;}
+    .clear{position: absolute;right: -50%;top: 50%;cursor: pointer;}
+    .ac{color: red;}
+</style>
+<body>
+    <div class="pen-wap">
+        <div class="color" id="color">
+            <span>颜色:</span>
+            <span class="color-span" data-color="#000000">黑色</span>
+            <span class="color-span" data-color="#0000ff">蓝色</span>
+            <span class="color-span" data-color="#00FF00">绿色</span>
+            <span class="color-span" data-color="#ff0000">红色</span>
+        </div>
+        <div class="thickness" id="thickness">
+            <span>粗细:</span>
+            <span class="font-span" data-font="1">1px</span>
+            <span class="font-span" data-font="2">2px</span>
+            <span class="font-span" data-font="4">4px</span>
+            <span class="font-span" data-font="8">8px</span>
+        </div>
+        <div class="clear" onclick="clearBtn()">清空画布</div>
+    </div>
+    <canvas id="canvas"></canvas>
+</body>
+<script src="./GraffitiBoard.js"></script>
+</html>
