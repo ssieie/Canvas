@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DicePictrue</title>
+  </head>
+  <style>
+    .flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 15px;
+    }
+  </style>
+  <body>
+    <div class="flex">
+      <span>
+        颗粒度：<input
+          type="number"
+          placeholder="越低越清晰"
+          id="myInput"
+          pattern="[1-9]\d*"
+        />
+      </span>
+      <input type="file" id="fileInput" accept="video/*,image/*" />
+      <video id="videoPlayer" controls></video>
+      <div id="wrapper" class="flex"></div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 20px">
+      <canvas id="myCanvas" style="display: none"></canvas>
+      <canvas id="diceCanvas"></canvas>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
